@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Edo';
+    src: url('Edo.eot');
+    src: url('Edo.eot?#iefix') format('embedded-opentype'),
+        url('Edo.woff') format('woff'),
+        url('Edo.ttf') format('truetype'),
+        url('Edo.svg#Edo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
