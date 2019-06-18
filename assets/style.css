@@ -5,11 +5,11 @@ body {
 
 @font-face {
     font-family: 'Edo';
-    src: url('../fonts/edo/Edo.eot');
-    src: url('../fonts/edo/Edo.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/edo/Edo.woff') format('woff'),
-        url('../fonts/edo/Edo.ttf') format('truetype'),
-        url('../fonts/edo/Edo.svg#Edo') format('svg');
+    src: url('.../assets/fonts/edo/Edo.eot');
+    src: url('fonts/edo/Edo.eot?#iefix') format('embedded-opentype'),
+        url('fonts/edo/Edo.woff') format('woff'),
+        url('fonts/edo/Edo.ttf') format('truetype'),
+        url('fonts/edo/Edo.svg#Edo') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -44,7 +44,7 @@ nav ul li {
 }
 
 .information {
-    background: linear-gradient(-45deg, rgba(226,226,226,.1) 0%, rgba(219,219,219,.5) 50%, rgba(209,209,209,.6) 51%, rgba(254,254,254,.9) 100%), url('../Imagenes/fondo.jpg') left no-repeat;
+    background: linear-gradient(-45deg, rgba(226,226,226,.1) 0%, rgba(219,219,219,.5) 50%, rgba(209,209,209,.6) 51%, rgba(254,254,254,.9) 100%), url('../assets/images/fondo.jpg') left no-repeat;
     background-size: cover;
     color: rgba(9, 10, 0, 0.664);
     font-display: "Edo";
