@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Barriecito', cursive;;
 }
 
 @font-face {
@@ -26,21 +27,52 @@ header {
 }
 
 .logo {
-    margin-left: 70px;
-    margin-top: 5.5px;
+    display: flex;
+    height: inherit;
+    align-items: center;
+    padding: 0 50px;
 }
 
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.motto {
+    font-family: 'DM Serif Display', serif;
+    padding: 0 5px;
+    color: #212121;
+    font-size: 19px;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+nav {
+    height: inherit;;
+}
+ 
 nav ul {
     display: flex;
-    justify-content: space-between; 
-    padding-top: 6px;
+    margin: 0;
+    padding: 0 50px;;
+    height: inherit;
 }
 
 nav ul li {
     color: rgba(8, 152, 219, 0.466);
     font-family: 'Edo', Arial, Helvetica, sans-serif;
     list-style: none;
-    margin-right: 140px;
+    height: inherit;
+}
+
+nav ul a {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+    margin: 0 20px;
+    text-decoration: none;
 }
 
 .information {
@@ -51,7 +83,7 @@ nav ul li {
     font-family: 'Edo', Arial, Helvetica, sans-serif;
     height: 90.7vh;
 }
-.personal{
+.information-personal{
     display: flex;
     justify-content: center;
     padding: 20vh;
