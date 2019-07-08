@@ -1,18 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Barriecito', cursive;;
-}
-
-@font-face {
-    font-family: 'Edo';
-    src: url('../assets/fonts/edo/Edo.eot');
-    src: url('../assets/fonts/edo/Edo.eot?#iefix') format('embedded-opentype'),
-        url('../assets/fonts/edo/Edo.woff') format('woff'),
-        url('../assets/fonts/edo/Edo.ttf') format('truetype'),
-        url('../assets/fonts/edo/Edo.svg#Edo') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Cabin Condensed', sans-serif;;
+    background:  rgba(209,209,209,1);
 }
 
 .container {
@@ -22,6 +12,8 @@ body {
 header {
     background: linear-gradient(45deg, rgba(226,226,226,1) 24%, rgba(219,219,219,1) 38%, rgba(215,215,215,1) 46%, rgba(209,209,209,1) 59%, rgba(214,214,214,1) 64%, rgba(254,254,254,1) 100%);
     display: flex;
+    width: 100%;
+    position: fixed;
     height: 61px;
     justify-content: space-between;
 }
@@ -40,7 +32,7 @@ header {
 }
 
 .motto {
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Roboto Mono', monospace;
     padding: 0 5px;
     color: #212121;
     font-size: 19px;
@@ -61,7 +53,6 @@ nav ul {
 
 nav ul li {
     color: rgba(8, 152, 219, 0.466);
-    font-family: 'Edo', Arial, Helvetica, sans-serif;
     list-style: none;
     height: inherit;
 }
@@ -69,6 +60,8 @@ nav ul li {
 nav ul a {
     display: flex;
     align-items: center;
+    font-family: 'Alegreya', serif;
+    font-weight: 700;
     height: inherit;
     padding: 0 10px;
     margin: 0 20px;
@@ -80,7 +73,7 @@ nav ul a {
     background-size: cover;
     color: rgba(9, 10, 0, 0.664);
     font-display: "Edo";
-    font-family: 'Edo', Arial, Helvetica, sans-serif;
+    font-family: ;
     height: 90.7vh;
 }
 .information-personal{
@@ -88,6 +81,10 @@ nav ul a {
     justify-content: center;
     padding: 20vh;
     text-align: center;
+}
+
+.information-personal h1, h2, h3 {
+    font-family: 'Merienda', cursive;
 }
 
 .eslogan {
@@ -115,4 +112,281 @@ nav ul a {
     padding: 5px; 
 }
 
+.latestWorks {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-area {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #292929;
+    height: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.latestworks-container {
+    flex-direction: row; 
+    margin: 20px 0;
+}
+
+.card {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-items {
+    background:  rgba(237,237,237,1);
+    border: 2px;
+    border-radius: 5px;
+    height: 486px;
+    margin: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.athlete {
+    width: inherit;
+    margin: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.athlete-name {
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.img-container {
+    margin: 0;
+    width: inherit;
+    padding: 4px;
+}
+
+.photo-athlete {
+    width: inherit;
+    border-radius: 5px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.description {
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.description-athlete {
+    margin: 0;
+    padding: 10px;
+}
+
+.exposition {
+    text-decoration: none;
+    background: #292929;
+    border: 1px solid;
+    padding: 8px 33px;
+    border-radius: 7px;
+}
+
+.exposition a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.description-gallery {
+    text-transform: capitalize;
+    font-weight: 600;
+    align-self: center;
+    margin: 10px;
+    padding: 10px 0;
+    font-size: 17px;
+}
+
+.img-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imgs-exposition {
+    display: flex;
+    margin: 30px;
+    width: 410px;
+    height: 225px;
+    border-radius: 5px;
+    background-size: 100%;
+}
+
+.imgs-exposition:hover {
+    background-size: 100%;
+    width: 425px;
+    height: 235px;
+    border: white solid 1px;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.imgs-exposition.ciclomontanismo {
+    background-image: url(../assets/images/gallery/ciclomontanismo.jpg);
+}
+
+
+.imgs-exposition.ciclomontanismo:hover {
+    background-image: url(../assets/images/gallery/ciclomontanismo2.jpg);
+}
+
+.imgs-exposition.cuarto {
+    background-image: url(../assets/images/gallery/cuartos\ de\ milla.jpg);
+}
+
+.imgs-exposition.cuarto:hover {
+    background-image: url(../assets/images/gallery/cuarto\ de\ milla2.jpg);
+}
+
+.imgs-exposition.monster {
+    background-image: url(../assets/images/gallery/monster\ jam.jpg);
+}
+
+.imgs-exposition.monster:hover {
+    background-image: url(../assets/images/gallery/monster\ jam2.jpg);
+}
+
+.imgs-exposition.motocross {
+    background-image: url(../assets/images/gallery/motocross.jpg);
+}
+
+.imgs-exposition.motocross:hover {
+    background-image: url(../assets/images/gallery/motocross2.jpg);
+}
+
+.imgs-exposition.paracaidismo {
+    background-image: url(../assets/images/gallery/paracaidismo.jpg);
+}
+
+.imgs-exposition.paracaidismo:hover {
+    background-image: url(../assets/images/gallery/paracaidismo2.jpg);
+}
+
+.imgs-exposition.rafting {
+    background-image: url(../assets/images/gallery/rafting.jpg);
+}
+
+.imgs-exposition.rafting:hover {
+    background-image: url(../assets/images/gallery/rafting2.jpg);
+}
+
+.imgs-exposition.surf {
+    background-image: url(../assets/images/gallery/surf.jpg);
+}
+
+.imgs-exposition.surf:hover {
+    background-image: url(../assets/images/gallery/surf2.jpg);
+}
+
+.imgs-exposition.x-games {
+    background-image: url(../assets/images/gallery/x\ games.jpg);
+}
+
+.imgs-exposition.x-games:hover {
+    background-image: url(../assets/images/gallery/x\ games2.jpg);
+}
+
+.contact {
+    background: rgba(226,226,226,1);
+    color: #212121;
+    height: 200px;
+}
+
+.contact h3 {
+    margin: 0;
+    padding: 10px 0 0 10px;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-contact h4 {
+    text-transform: capitalize;
+}
+
+.social {
+    display: flex;
+}
+
+.link-social {
+    width: 50px;
+    height: 50px;   
+    background-size: 50px 50px;
+    margin: 2px;
+}
+
+.link-social.facebook {
+    background-image: url(../assets/images/social/facebook.png);
+    padding: 2px;
+    background-size: 59px; 
+}
+
+.link-social.instagram {
+    background-image: url(../assets/images/social/instagram.png);
+}
+
+.link-social.twitter {
+    background-image: url(../assets/images/social/twitter.png);
+}
+
+footer {
+    display: flex;
+    color: #fff;
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: center;
+    width: -webkit-fill-available;
+    height: 50px;
+    margin: 0;
+    background: grey; 
+}
+
+
+
+.logo-footer {
+    width: 33px;
+    vertical-align: middle;
+}
+
+.author {
+    margin: 0 15px;
+    height: inherit;
+    text-align: center;
+}
+
+footer p {
+    padding: 0 15px;
+    text-transform: capitalize;
+}
+
+.creator {
+    height: inherit;
+    text-align: center;
+}
 

@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700|Cabin+Condensed|Merienda|Roboto+Mono:400,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Christopher Betancur</title>
 </head>
@@ -17,10 +16,10 @@
             </section>
             <nav>
                 <ul> 
-                    <li><a href="#ultimos-trabajos">Ultimos Trabajos</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#acerca-de-mi">Acerca De Mi</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a data-scroll href="#ultimos-trabajos">Ultimos Trabajos</a></li>
+                    <li><a data-scroll href="#galeria">Galeria</a></li>
+                    <li><a data-scroll href="#acerca-de-mi">Acerca De Mi</a></li>
+                    <li><a data-scroll href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </header>
@@ -38,59 +37,163 @@
         </section>
         <main>
             <section class="latestWorks">
-                <h3 id="ultimos-trabajos">
+                <h3 id="ultimos-trabajos" class="title-area">
                      Ultimos Trabajos
                 </h3>
-                <section class="images">
-                    <article class="img">
-                        <figure class="img-container">
-                            <img src="assets/images/latest work/hamiltonF1.jpg" alt="Christopher Lewis Hamilton" class="f1">
-                        </figure>
-                        <p>El piloto de Formula 1 Lewis Hamilton en el Circuito Gilles Villeneuve Canadá, donde termino en Primera posición. </p>
-                    </article>
-                    <article class="img">
-                        <figure class="img-container">
-                            <img src="assets/images/latest work/alex magos.jpg" alt="Christopher Alex Megos" class="alpinismo">
-                        </figure>
-                        <p>Alex Megos, uno de los mejores alpinistas de la actualidad con tan solo 25 años. Acá esta en Siruana España mostrando su gran talento</p>
-                    </article>
-                    <article class="img">
-                        <figure class="img-container">
-                            <img src="assets/images/latest work/ken block.jpg" alt="Christopher Ken Block" class="ken_block">
-                        </figure>
-                        <p>Es uno de los ultimas creaciones de Ken Block, el cual se llama Hoonitruck. Es un Ford F-150 de 1977 el cual da nada menos que 914 CV </p>
-                    </article>
-                    <article class="img">
-                        <figure class="img-container">
-                            <img src="assets/images/latest work/leticia bufoni.jpg" alt="Christopher Leticia Bufoni" class="skate">
-                        </figure>
-                        <p>Leticia Bufoni. Una skater profesional Brasileña. Ganadora de los X Games y una de las mejores skaters.</p>
-                    </article>
+                <section class="latestworks-container">
+                    <div class="card">
+                        <article class="card-items">
+                            <div class="athlete">
+                                <span class="athlete-name">
+                                    Lewis Hamilton
+                                </span>
+                            </div>
+                            <figure class="img-container">
+                                <img src="assets/images/latest work/hamiltonF1.jpg" alt="Christopher Lewis Hamilton" class="photo-athlete" height="150px">
+                            </figure>
+                            <div class="description">
+                                <p  class="description-athlete">
+                                    El piloto de Formula 1 Lewis Hamilton en el Circuito Gilles Villeneuve Canadá, donde termino en Primera posición. 
+                                </p>
+                            </div>
+                            <div class="exposition">
+                                <a href="#">ver exposicion</a>
+                            </div>
+                        </article>
+                        <article class="card-items">
+                            <div class="athlete">
+                                <span class="athlete-name">
+                                    Alex Megos
+                                </span>
+                            </div>  
+                            <figure class="img-container">
+                                <img src="assets/images/latest work/alex magos.jpg" alt="Christopher Alex Megos" class="photo-athlete" height="150px">
+                            </figure>
+                            <div class="description">
+                                <p class="description-athlete">
+                                    Alex Megos, uno de los mejores alpinistas de la actualidad con tan solo 25 años. Acá esta en Siruana España mostrando su gran talento
+                                </p>
+                            </div>
+                            <div class="exposition">
+                                <a href="#">ver exposicion</a>
+                            </div>
+                        </article>
+                        <article class="card-items">
+                            <div class="athlete">
+                                <span class="athlete-name">
+                                    Ken Block
+                                </span>
+                            </div>
+                            <figure class="img-container">
+                                <img src="assets/images/latest work/ken block.jpg" alt="Christopher Ken Block" class="photo-athlete" height="150px">
+                            </figure>
+                            <div class="description">
+                                <p class="description-athlete">
+                                    Es uno de los ultimas creaciones de Ken Block, el cual se llama Hoonitruck. Es un Ford F-150 de 1977 el cual da nada menos que 914 CV 
+                                </p>
+                            </div>
+                            <div class="exposition">
+                                <a href="#">ver exposicion</a>
+                            </div>
+                        </article>
+                        <article class="card-items">
+                            <div class="athlete">
+                                <span class="athlete-name">
+                                    Leticia Bufoni
+                                </span>
+                            </div>
+                            <figure class="img-container">
+                                <img src="assets/images/latest work/leticia bufoni.jpg" alt="Christopher Leticia Bufoni" class="photo-athlete" height="200">
+                            </figure>
+                            <div class="description">
+                                <p class="description-athlete">
+                                    Leticia Bufoni. Una skater profesional Brasileña. Ganadora de los X Games y una de las mejores skaters.
+                                </p>
+                            </div>
+                            <div class="exposition">
+                                <a href="#">ver exposicion</a>
+                            </div>
+                        </article>
+                    </div>
                 </section>
             </section>
-            <section class="gallery">
-                <h3 id="galeria">
+            <section class="gallery"> 
+                <h3 id="galeria" class="title-area">
                     Galeria
                 </h3>
+                <div class="gallery-container">
+                    <div class="description-gallery">
+                        <p>
+                            en esta parte podras ver una serie de proyectos en los cuales participe y si quieres ver mas <br> sobre cada uno de estos trabajos dale click al que mas te llame la atencion y mira todo sobre el.
+                        </p>
+                    </div>
+                    <section class="img-gallery">
+                        <article class="img-gallery-container">
+                            <div>
+                                <a href="#" class="imgs-exposition ciclomontanismo" ></a>
+                            </div>
+                            <div>
+                                <a href="#" class="imgs-exposition cuarto" ></a>
+                            </div>
+                            <div>
+                                <a href="#" class="imgs-exposition monster" ></a>
+                            </div>
+                            <div>
+                                <a href="#" class="imgs-exposition motocross" ></a>
+                            </div>
+                            <div>
+                                <a href="#" class="imgs-exposition paracaidismo" ></a>
+                            </div>
+                            <div>
+                                <a href="#" class="imgs-exposition rafting" ></a>
+                            </div>
+                            <div>
+                                <a href="#" class="imgs-exposition surf" ></a>
+                            </div>
+                            <div>
+                                <a href="#" class="imgs-exposition x-games" ></a>
+                            </div>
+                        </article>
+                    </section>
+                </div>
             </section>
             <section class="about-me">
-                 <h3 id="acerca-de-mi">
+                 <h3 id="acerca-de-mi" class="title-area">
                     Acerca de mi
                 </h3>
             </section>
             <section class="contact">
-                <form action="" class="form-contact">
-                    <h3 id="contacto">
-                        ¿Quieres Trabajar Conmigo?
-                    </h3>
-                    <input type="text" placeholder="Dejame Tu Email" id="email">
-                    <input type="submit" value="Enviar">
-                </form>
+                <h3 id="contacto" class="title-contact">
+                    Contactame
+                </h3>
+                <div class="contact-content">
+                    <form action="" class="form-contact">
+                        <h4>¿quieres trabajar conmigo?</h4>
+                        <input type="text" placeholder="Dejame Tu Email" id="email">
+                        <button>Enviar</button>
+                    </form>
+                    <div class="social">
+                        <a href="#" class="link-social facebook"></a>
+                        <a href="#" class="link-social instagram"></a>
+                        <a href="#" class="link-social twitter"></a>
+                    </div>
+                </div>
             </section>
             <footer>
-                Footer
+                <div class="author">
+                    <p>Christopher Betancur Cuartas <img src="assets/images/logo.png" alt="Imagen Por Christopher" class="logo-footer" width="50px"></p>
+                </div>
+                <div class="creator">
+                    <p>especial agradecimiento a <strong>Christian Betancur Trujillo</strong> el cual <br> fue el responsable de esta web</p>
+                </div>
             </footer>
         </main>
-    </div>    
+    </div>   
+    <script  src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[data-scroll]', {
+            speed: 1000
+        });
+    </script>
 </body>
 </html>
