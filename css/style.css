@@ -309,6 +309,64 @@ nav ul a {
     background-image: url(../assets/images/gallery/x\ games2.jpg);
 }
 
+.about-me-content {
+    width: 100%;
+}
+
+.about-me-content-hello {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.about-me-content h3 {
+    text-align: center;
+    font-size: 25px;
+}
+.about-me-content-hello p{
+    width: 686px;
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+.about-me-section {
+    width: 100%;
+    margin-top: 50px;
+    height: 500px;
+    background-image: url(../assets/images/about\ me/dakar.png);
+    background-size: cover;
+}
+
+
+.about-me-section p {
+    margin: 0;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.trajectory {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    height: 600px;
+    border-top: 1.5px black solid;
+    border-bottom: 1.5px black solid;
+}
+
+.trajectory p {
+    width: 686px;
+}
+
 .contact {
     background: rgba(226,226,226,1);
     color: #212121;
@@ -328,6 +386,30 @@ nav ul a {
 
 .form-contact h4 {
     text-transform: capitalize;
+}
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    width: 251px;
+}
+
+.form-contact input,button {
+    flex-shrink: 0;
+    background: transparent;
+    border: black solid 1px;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.form-contact button {
+    background: transparent;
+    border: black 1px solid;
+    border-radius: 3px;
+    color: black;
+    width: 100px;
+    margin-top: 6px;
+    padding: 5px 20px;
 }
 
 .social {
