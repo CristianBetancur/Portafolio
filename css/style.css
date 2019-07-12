@@ -11,13 +11,15 @@ body {
 
 .container {
     margin: auto;
+    max-width: 1250px;
 }
 
 header {
     background: linear-gradient(45deg, rgba(226,226,226,1) 24%, rgba(219,219,219,1) 38%, rgba(215,215,215,1) 46%, rgba(209,209,209,1) 59%, rgba(214,214,214,1) 64%, rgba(254,254,254,1) 100%);
     display: flex;
     flex-wrap: wrap;
-    width: 95vw;
+    width: 100%;
+    font-size: 16px;
     margin: auto;
     /* position: fixed; */
     height: 61px;
@@ -41,13 +43,14 @@ header {
     font-family: 'Roboto Mono', monospace;
     padding: 0 5px;
     color: #212121;
-    font-size: 19px;
+    font-size: 1.3em;
     text-transform: capitalize;
     font-style: italic;
 }
 
 nav {
-    height: inherit;;
+    height: inherit;
+    font-size: 1.1em;
 }
  
 nav ul {
@@ -137,8 +140,9 @@ nav ul a {
 
 .latestworks-container {
     flex-direction: row; 
+    flex-wrap: wrap;
     margin: 20px 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .card {
@@ -151,11 +155,12 @@ nav ul a {
 
 .card-items {
     background:  rgba(237,237,237,1);
+    font-size: 16px;
     border: 2px;
     border-radius: 5px;
-    height: 486px;
+    height: 582px;
     margin: 10px;
-    width: 45%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,7 +178,7 @@ nav ul a {
 
 .athlete-name {
     font-weight: 700;
-    font-size: 21px;
+    font-size: 1.8em;
 }
 
 .img-container {
@@ -184,9 +189,9 @@ nav ul a {
 }
 
 .photo-athlete {
-    width: inherit;
+    max-width: 100%;
     border-radius: 5px;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -194,6 +199,7 @@ nav ul a {
     height: 150px;
     display: flex;
     align-items: center;
+    font-size: 1.09em;
 }
 
 .description-athlete {
@@ -203,6 +209,7 @@ nav ul a {
 
 .exposition {
     text-decoration: none;
+    font-size: 1em;
     background: #292929;
     border: 1px solid;
     padding: 8px 33px;
@@ -220,12 +227,13 @@ nav ul a {
 }
 
 .description-gallery {
+    text-align: center;
     text-transform: capitalize;
     font-weight: 600;
     align-self: center;
     margin: 10px;
     padding: 10px 0;
-    font-size: 17px;
+    font-size: 1em;
 }
 
 .img-gallery-container {
@@ -235,16 +243,19 @@ nav ul a {
 }
 
 .img-gallery-container div {
-    width: 500px;
+    width: 48%;
+    height: 300px;
+    margin: 1%;
 }
 
 .imgs-exposition {
     display: flex;
-    margin: 30px;
-    width: 410px;
-    height: 225px;
+    width: 95%;
+    height: 95%;
+    margin: auto;
     border-radius: 5px;
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .imgs-exposition:hover {
@@ -321,6 +332,7 @@ nav ul a {
 }
 
 .about-me-content {
+    font-size: 16px;
     width: 100%;
 }
 
@@ -335,6 +347,7 @@ nav ul a {
 .about-me-content h3 {
     text-align: center;
     font-size: 25px;
+    margin-bottom: 10px;
 }
 .about-me-content-hello p{
     width: 686px;
@@ -344,6 +357,7 @@ nav ul a {
 
 .about-me-section {
     width: 100%;
+    border-radius: 4px;
     margin-top: 50px;
     height: 500px;
     background-image: url(../assets/images/about\ me/dakar.png);
@@ -357,7 +371,8 @@ nav ul a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 2.5em;
+    text-align: center;
     color: white;
     font-weight: 700;
     font-style: italic;
@@ -373,6 +388,10 @@ nav ul a {
     height: 600px;
     border-top: 1.5px black solid;
     border-bottom: 1.5px black solid;
+}
+
+.trajectory figure img {
+    border: 1px white solid;
 }
 
 .trajectory p {
@@ -514,43 +533,83 @@ footer p {
 }
 
 @media screen and (max-width: 1024px){
+    .img-gallery-container div {
+        width: 40%;
+        height: 209px;
+    }
     
 }
 
 @media screen and (max-width: 768px) {
-    
-}
-
-@media screen and (max-width: 499px) {
-    .header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-        height: auto;
+    .header {
+        font-size: 14.5px;
     }
-    .motto {
-        display: none;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin: 5px auto;
-    }
-}
-
-@media screen and (max-width: 480px) {
     .card {
         flex-direction: column;
         align-items: center;
     }
     .card-items {
-        width: 78%;
+        font-size: 14px;
+        width: 68%;
+    }  
+    .img-gallery-container div {
+        width: 42%;
+        height: 150px;
+    } 
+    .about-me-content-hello {
+        height: 350px;
+    }
+    .about-me-section {
+        height: 373px;
+    }
+    .trajectory {
+        flex-direction: column-reverse;
+        padding: 0 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-items {
+        width: 95%;
+    } 
+    .header nav ul {
+        padding: 0;
+    }
+    .gallery-container{
+        font-size: 0.8em;
+    }
+    .img-gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-gallery-container div {
+        width: 84%;
+        height: 203px;
+    }
+    .trajectory-content {
+        width: 100%
+    }
+    .trajectory p {
+        width: inherit;
     }
 
 }
 
 @media screen and (max-width: 320px) {
+    .motto {
+        display: none;
+    }
+    .header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-items {
+        height: 491px
+    }
+    .photo-athlete {
+        height: 177px;
+    }
+    .img-gallery-container div {
+        height: 137px;
+    }
 }
