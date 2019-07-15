@@ -331,6 +331,10 @@ nav ul a {
     background-image: url(../assets/images/gallery/x\ games2.jpg);
 }
 
+.about-me {
+    width: 100%;
+}
+
 .about-me-content {
     font-size: 16px;
     width: 100%;
@@ -340,6 +344,7 @@ nav ul a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     justify-content: center;
     height: 500px;
 }
@@ -350,7 +355,7 @@ nav ul a {
     margin-bottom: 10px;
 }
 .about-me-content-hello p{
-    width: 686px;
+    width: 100%;
     margin: 0 0 24px 0;
     text-align: center;
 }
@@ -449,9 +454,9 @@ nav ul a {
 }
 
 .link-social {
-    width: 50px;
-    height: 50px;   
-    background-size: 50px 50px;
+    width: 60px;
+    height: 60px;   
+    background-size: 60px 60px;
     margin: 2px;
 }
 
@@ -566,6 +571,15 @@ footer p {
         flex-direction: column-reverse;
         padding: 0 2em;
     }
+    .contact {
+        height: auto;
+    }
+    .contact-content {
+        padding: 29px 0;
+    }
+    .form-contact input {
+        margin: 10px 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -586,13 +600,38 @@ footer p {
         width: 84%;
         height: 203px;
     }
+    .about-me-content {
+        font-size: 13px;
+    }
+    .about-me-section {
+        height:  235px;
+    }
+    .about-me-section p {
+        font-size: 2.2em;
+    }
+    .trajectory {
+        flex-wrap: initial;
+    }
     .trajectory-content {
-        width: 100%
+        width: 100%;
+        height: auto;
     }
     .trajectory p {
         width: inherit;
     }
-
+    .social {
+        padding-top: 10px;
+    }
+    footer {
+        height: auto;
+        justify-content: center;
+    }
+    .author {
+        margin: 7px 15px;
+    }
+    .creator {
+        padding: 10px 0;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -612,4 +651,27 @@ footer p {
     .img-gallery-container div {
         height: 137px;
     }
+    .about-me-content-hello {
+        height: 246px;
+        margin-top: 17px;
+    }    
+    .about-me-section {
+        margin-top: 15px;
+    }
+    .about-me-section {
+        height: 164px;
+    }
+    .about-me-section p {
+        font-size: 1.7em;
+    }
+    .about-me-content .trajectory-content h3 {
+        margin-top: 82px;
+    }
+    .trajectory {
+        height: auto;
+    }
+    .trajectory figure img {
+        width: 150px;
+        margin: 23px auto;
+    }    
 }
