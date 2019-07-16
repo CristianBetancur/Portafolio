@@ -9,14 +9,15 @@
 </head>
 <body>
     <div class="container">
+        <i class="icon-menu burger-button" id="burger-menu"></i>
         <header class="header" id="inicio">
             <section class="logo">
                 <a  href="#inicio">
                     <img src="assets/images/logo.png" width="50" height="50" alt="Imagen Por Christopher"><strong class="motto">mucho mas que una foto</strong> 
                 </a> 
             </section>
-            <nav>
-                <ul> 
+            <nav> 
+                <ul class="menu"> 
                     <li><a data-scroll href="#ultimos-trabajos">Ultimos Trabajos</a></li>
                     <li><a data-scroll href="#galeria">Galeria</a></li>
                     <li><a data-scroll href="#acerca-de-mi">Acerca De Mi</a></li>
@@ -24,7 +25,7 @@
                 </ul>
             </nav>
         </header>
-        <!-- <section class="information">
+        <section class="information">
             <section class="information-personal">
                 <article>
                     <h1 class="eslogan">Hasta Donde Tu Quieras Llegar</h1>
@@ -35,7 +36,7 @@
                     </figure>
                 </article>
             </section>
-        </section> -->
+        </section>
         <main>
             <section class="latestWorks">
                 <h3 id="ultimos-trabajos" class="title-area">
@@ -227,6 +228,32 @@
         var scroll = new SmoothScroll('a[data-scroll]', {
             speed: 1000
         });
+    </script>
+    <script>
+        const ipad = window.matchMedia('screen and (max-width: 320px)') 
+
+        const menu = (document.querySelector('.menu'));
+
+        const burgerButton = document.querySelector('#burger-menu');
+
+
+        ipad.addListener(validation);
+
+        function validation(event) {
+            if (event.matches) {
+                burgerButton.addEventListener('click', hideShow)
+            } else {
+                burgerButton.removeEventListener('click', hideShow)
+            }
+        }
+
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active');
+            }else {
+                menu.classList.add('is-active');
+            }
+        }
     </script>
 </body>
 </html>

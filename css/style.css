@@ -3,10 +3,53 @@
     padding: 0;
     box-sizing: border-box
 }
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../assets/fonts/iconmenu/icomoon.eot?h8i4cb');
+    src:  url('../assets/fonts/iconmenu/icomoon.eot?h8i4cb#iefix') format('embedded-opentype'),
+      url('../assets/fonts/iconmenu/icomoon.ttf?h8i4cb') format('truetype'),
+      url('../assets/fonts/iconmenu/icomoon.woff?h8i4cb') format('woff'),
+      url('../assets/fonts/iconmenu/icomoon.svg?h8i4cb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
 
 body {
     font-family: 'Cabin Condensed', sans-serif;;
     background:  rgba(209,209,209,1);
+}
+.burger-button {
+    width: 40px;
+    height: 40px;
+    background: #212121;
+    color: #fff;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 5;
 }
 
 .container {
@@ -81,13 +124,11 @@ nav ul a {
     background: linear-gradient(-45deg, rgba(226,226,226,.1) 0%, rgba(219,219,219,.5) 50%, rgba(209,209,209,.6) 51%, rgba(254,254,254,.9) 100%), url('../assets/images/fondo.jpg') left no-repeat;
     background-size: cover;
     color: rgba(9, 10, 0, 0.664);
-    font-display: "Edo";
-    font-family: ;
-    height: 90.7vh;
 }
 .information-personal{
     display: flex;
     justify-content: center;
+    font-size: 16px;
     padding: 20vh;
     text-align: center;
 }
@@ -97,19 +138,15 @@ nav ul a {
 }
 
 .eslogan {
-    font-size: 37px;
-    margin: auto;
+    font-size: 2.5em;
 }
 
 .name {
-    font-size: 30px;
-    height: 10px;
+    font-size: 2em;
 }
 
 .profession {
-    font-size: 25px;
-    padding: 10px;
-    height: 6px;
+    font-size: 1.6em;
 }
 
 .photo {
@@ -134,7 +171,7 @@ nav ul a {
     color: #fff;
     background: #292929;
     height: 70px;
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 0;
 }
 
@@ -529,7 +566,7 @@ footer p {
         justify-content: space-between;
     }
 
-    .header nav ul {
+    .menu {
         width: inherit;
         display: inherit;
         justify-content: space-between;
@@ -538,6 +575,9 @@ footer p {
 }
 
 @media screen and (max-width: 1024px){
+    .information-personal {
+        font-size: 14px;
+    }
     .img-gallery-container div {
         width: 40%;
         height: 209px;
@@ -586,8 +626,14 @@ footer p {
     .card-items {
         width: 95%;
     } 
-    .header nav ul {
+    .menu {
         padding: 0;
+    }
+    .information-personal {
+        font-size: 12px;
+    }
+    .information-personal h1, h2, h3 {
+         margin-bottom: 0.5em;
     }
     .gallery-container{
         font-size: 0.8em;
@@ -635,12 +681,34 @@ footer p {
 }
 
 @media screen and (max-width: 320px) {
+    .burger-button {
+        display: flex;
+    }
     .motto {
         display: none;
     }
-    .header nav ul {
+    .menu {
+        position: fixed;
+        left: -100vw;
+        top: 0;
+        bottom: 0;
+        width: -100vw; 
+        z-index: 4;
+        background: rgba(226,226,226,0.8);
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        transition: .5s;
+
+    }
+    .menu.is-active {
+        left: 0;
+    }
+    .information {
+        background: url('../assets/images/fondo.jpg') left no-repeat;
+    }
+    .information-personal {
+        padding: 3.5em;
     }
     .card-items {
         height: 491px
