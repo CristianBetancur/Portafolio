@@ -230,7 +230,7 @@
         });
     </script>
     <script>
-        const ipad = window.matchMedia('screen and (max-width: 320px)') 
+        const ipad = window.matchMedia('screen and (max-width: 768px)') 
 
         const menu = (document.querySelector('.menu'));
 
@@ -246,6 +246,8 @@
                 burgerButton.removeEventListener('click', hideShow)
             }
         }
+
+        validation(ipad);
 
         function hideShow() {
             if (menu.classList.contains('is-active')) {

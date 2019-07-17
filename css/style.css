@@ -423,6 +423,7 @@ nav ul a {
 
 .trajectory {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
@@ -432,12 +433,20 @@ nav ul a {
     border-bottom: 1.5px black solid;
 }
 
+.trajectory figure {
+    width: 16%;
+}
+
+.trajectory-content {
+    width: 55%;
+}
+
 .trajectory figure img {
     border: 1px white solid;
 }
 
 .trajectory p {
-    width: 686px;
+    /* width: 686px; */
 }
 
 .contact {
@@ -589,6 +598,25 @@ footer p {
     .header {
         font-size: 14.5px;
     }
+    .burger-button {
+        display: flex;
+    }
+    .menu {
+        position: fixed;
+        left: -100vw;
+        top: 0;
+        bottom: 0;
+        width: -100vw; 
+        z-index: 4;
+        background: rgba(226,226,226,0.8);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    }
+    .menu.is-active {
+        left: 0;
+    }
     .card {
         flex-direction: column;
         align-items: center;
@@ -611,18 +639,31 @@ footer p {
         flex-direction: column-reverse;
         padding: 0 2em;
     }
+    .trajectory-content {
+        width: 100%;
+    }
+
+    .trajectory figure {
+        width: 100%;
+        text-align: center;
+    }
+
     .contact {
         height: auto;
     }
     .contact-content {
         padding: 29px 0;
     }
+    
     .form-contact input {
         margin: 10px 0;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .motto {
+        display: none;
+    }
     .card-items {
         width: 95%;
     } 
@@ -658,13 +699,13 @@ footer p {
     .trajectory {
         flex-wrap: initial;
     }
-    .trajectory-content {
+    /* .trajectory-content {
         width: 100%;
         height: auto;
     }
     .trajectory p {
         width: inherit;
-    }
+    } */
     .social {
         padding-top: 10px;
     }
@@ -681,29 +722,6 @@ footer p {
 }
 
 @media screen and (max-width: 320px) {
-    .burger-button {
-        display: flex;
-    }
-    .motto {
-        display: none;
-    }
-    .menu {
-        position: fixed;
-        left: -100vw;
-        top: 0;
-        bottom: 0;
-        width: -100vw; 
-        z-index: 4;
-        background: rgba(226,226,226,0.8);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: .5s;
-
-    }
-    .menu.is-active {
-        left: 0;
-    }
     .information {
         background: url('../assets/images/fondo.jpg') left no-repeat;
     }
