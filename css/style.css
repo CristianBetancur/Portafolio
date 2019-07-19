@@ -35,26 +35,29 @@
 
 body {
     font-family: 'Cabin Condensed', sans-serif;;
-    background:  rgba(209,209,209,1);
+    /*background:  rgba(209,209,209,1);*/
 }
 .burger-button {
-    width: 40px;
+    /*
     height: 40px;
     background: #212121;
-    color: #fff;
     border-radius: 50%;
-    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
     top: 5px;
     left: 5px;
+    */
+    width: 40px;
+    color: #212121;
+    display: none;
+    font-size: 32px;
     z-index: 5;
 }
 
 .container {
     margin: auto;
-    max-width: 1250px;
+    /*max-width: 1250px;*/
 }
 
 header {
@@ -66,6 +69,7 @@ header {
     margin: auto;
     /* position: fixed; */
     height: 61px;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -171,7 +175,7 @@ nav ul a {
     color: #fff;
     background: #292929;
     height: 70px;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     margin-bottom: 0;
 }
 
@@ -194,9 +198,10 @@ nav ul a {
     background:  rgba(237,237,237,1);
     font-size: 16px;
     border: 2px;
-    border-radius: 5px;
-    height: 582px;
+    /*border-radius: 5px;
+    height: 582px;*/
     margin: 10px;
+    padding-bottom: 20px;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -221,13 +226,13 @@ nav ul a {
 .img-container {
     margin: 0;
     width: 100%;
-    padding: 4px;
+    /*padding: 4px;*/
 
 }
 
 .photo-athlete {
-    max-width: 100%;
-    border-radius: 5px;
+    width: 100%;
+    /*border-radius: 5px;*/
     height: 300px;
     object-fit: cover;
 }
@@ -400,7 +405,7 @@ nav ul a {
 .about-me-section {
     width: 100%;
     border-radius: 4px;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     height: 500px;
     background-image: url(../assets/images/about\ me/dakar.png);
     background-size: cover;
@@ -424,7 +429,7 @@ nav ul a {
 .trajectory {
     display: flex;
     width: 100%;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     align-items: center;
     justify-content: space-around;
     text-align: left;
@@ -452,12 +457,13 @@ nav ul a {
 .contact {
     background: rgba(226,226,226,1);
     color: #212121;
-    height: 200px;
+    /*height: 200px;*/
+    padding: 20px;
 }
 
 .contact h3 {
-    margin: 0;
-    padding: 10px 0 0 10px;
+    margin-bottom: 10px;
+    /*padding: 10px 0 0 10px;*/
 }
 
 .contact-content {
@@ -500,16 +506,22 @@ nav ul a {
 }
 
 .link-social {
-    width: 60px;
-    height: 60px;   
-    background-size: 60px 60px;
+    width: 70px;
+    /*height: 60px;
+    background-size: 60px 60px;*/
     margin: 2px;
+    font-size: 50px;
+    border-radius: 50%;
+    background-color: #212121;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
 }
-
+/*
 .link-social.facebook {
     background-image: url(../assets/images/social/facebook.png);
     padding: 2px;
-    background-size: 59px; 
+    background-size: 59px;
 }
 
 .link-social.instagram {
@@ -519,7 +531,7 @@ nav ul a {
 .link-social.twitter {
     background-image: url(../assets/images/social/twitter.png);
 }
-
+*/
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -528,8 +540,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: -webkit-fill-available;
-    height: 50px;
-    margin: 0;
+    /*height: 50px;*/
+    padding: 10px;
     background: grey; 
 }
 
@@ -557,16 +569,20 @@ footer p {
 }
 
 @media screen and (max-width: 1110px) {
+    .information-personal {
+        padding: 11vh;
+    }
+
     .header {
         height: auto;
         display: flex;
         border-radius: 5px;
         justify-content: center;
-        margin-top: 11px;
+        /*margin-top: 11px;*/
     }
     .logo {
-        margin-bottom: 9px;
-        padding-top: 7px;
+        /*margin-bottom: 9px;*/
+        padding: 7px;
     }
     .header nav {
         margin-bottom: 12px;
@@ -591,13 +607,24 @@ footer p {
         width: 40%;
         height: 209px;
     }
+    .img-gallery-container div, .card-items{
+        width: 48%;
+        margin: 5px 0;
+    }
     
 }
 
 @media screen and (max-width: 768px) {
     .header {
         font-size: 14.5px;
+        justify-content: flex-start;
+        padding: 0px 14px;
     }
+
+    .header nav{
+        display: none;
+    }
+
     .burger-button {
         display: flex;
     }
@@ -623,7 +650,6 @@ footer p {
     }
     .card-items {
         font-size: 14px;
-        width: 68%;
     }  
     .img-gallery-container div {
         width: 42%;
@@ -637,7 +663,7 @@ footer p {
     }
     .trajectory {
         flex-direction: column-reverse;
-        padding: 0 2em;
+        padding: 10px 2em;
     }
     .trajectory-content {
         width: 100%;
@@ -658,6 +684,10 @@ footer p {
     .form-contact input {
         margin: 10px 0;
     }
+
+    .img-gallery-container div {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -672,6 +702,7 @@ footer p {
     }
     .information-personal {
         font-size: 12px;
+        padding: 4vh;
     }
     .information-personal h1, h2, h3 {
          margin-bottom: 0.5em;
@@ -687,6 +718,8 @@ footer p {
         width: 84%;
         height: 203px;
     }
+
+
     .about-me-content {
         font-size: 13px;
     }
@@ -723,11 +756,10 @@ footer p {
 
 @media screen and (max-width: 320px) {
     .information {
-        background: url('../assets/images/fondo.jpg') left no-repeat;
+        background: url('../assets/images/fondo.jpg') no-repeat;
+        background-size: cover;
     }
-    .information-personal {
-        padding: 3.5em;
-    }
+
     .card-items {
         height: 491px
     }
